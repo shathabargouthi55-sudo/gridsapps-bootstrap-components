@@ -3,52 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Starter</title>
+    <title>Bootstrap Components</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-<nav class="navbar bg-body-tertiary sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#">HealthTech</a>
 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="offcanvas" data-bs-target="#mainMenu"
-                aria-controls="mainMenu" aria-label="Open menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar bg-body-tertiary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">HealthTech</a>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu"
-             aria-labelledby="mainMenuLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="mainMenuLabel">Menu</h5>
-                <button type="button" class="btn-close"
-                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#services" data-bs-dismiss="offcanvas">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing" data-bs-dismiss="offcanvas">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq" data-bs-dismiss="offcanvas">FAQ</a></li>
-                    <li class="nav-item">
-                        <button class="nav-link" type="button"
-                                data-bs-toggle="modal" data-bs-target="#contactModal"
-                                data-bs-dismiss="offcanvas">Contact</button>
-                    </li>
-                </ul>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#mainMenu"
+                    aria-controls="mainMenu" aria-label="Open menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenu"
+                 aria-labelledby="mainMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="mainMenuLabel">Menu</h5>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#services" data-bs-dismiss="offcanvas">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq" data-bs-dismiss="offcanvas">FAQ</a></li>
+                        <li class="nav-item">
+                            <button class="nav-link" type="button"
+                                    data-bs-toggle="modal" data-bs-target="#contactModal"
+                                    data-bs-dismiss="offcanvas">Contact</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
     <header class="bg-primary text-white text-center py-5">
         <div class="container">
             <h1 class="display-5 fw-bold">Digital Solutions for Healthcare</h1>
             <p class="lead">Simple, practical tools for providers and patients.</p>
-            <div class="d-flex justify-content-center gap-2">
-                <a href="#services" class="btn btn-light btn-lg">Learn More</a>
-                <a href="#pricing" class="btn btn-outline-light btn-lg">View Pricing</a>
-            </div>
+            <a href="#services" class="btn btn-light btn-lg">Learn More</a>
         </div>
     </header>
 
@@ -56,7 +54,6 @@
         <h2 class="mb-4">What We Do</h2>
 
         <div class="row g-3">
-
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100">
                     <div class="card-body">
@@ -83,148 +80,56 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <section class="container py-5" id="pricing">
-        <h2 class="text-center mb-4">Pricing</h2>
+    <!-- FAQ accordion goes here (Task 3) -->
 
-        <div class="row g-4">
-
-            <div class="col-12 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">Basic</h3>
-                        <p class="display-6 fw-bold">$19<small class="fs-6 text-muted">/mo</small></p>
-                        <ul class="list-unstyled">
-                            <li>Appointment scheduling</li>
-                            <li>1 provider</li>
-                            <li>Email support</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline-primary">Choose Basic</a>
-                    </div>
+    <div class="modal fade" id="contactModal" tabindex="-1"
+         aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="contactModalLabel">Contact Us</h2>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
 
-            <div class="col-12 col-md-4">
-                <div class="card h-100 text-center border-primary">
-                    <div class="card-body">
-                        <span class="badge bg-primary mb-2">Most Popular</span>
-                        <h3 class="h5">Pro</h3>
-                        <p class="display-6 fw-bold">$49<small class="fs-6 text-muted">/mo</small></p>
-                        <ul class="list-unstyled">
-                            <li>Patient dashboards</li>
-                            <li>5 providers</li>
-                            <li>Priority support</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary">Choose Pro</a>
+                <form class="was-validated">
+                    <div class="modal-body">
+
+                        <div class="alert alert-info" role="alert">
+                            We usually reply within 24 hours.
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required minlength="3">
+                            <div class="invalid-feedback">Please enter your full name (at least 3 characters).</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" required minlength="10"></textarea>
+                            <div class="invalid-feedback">Please write a message (at least 10 characters).</div>
+                        </div>
+
                     </div>
-                </div>
-            </div>
 
-            <div class="col-12 col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h3 class="h5">Premium</h3>
-                        <p class="display-6 fw-bold">$99<small class="fs-6 text-muted">/mo</small></p>
-                        <ul class="list-unstyled">
-                            <li>Full digital health suite</li>
-                            <li>Unlimited providers</li>
-                            <li>24/7 support</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline-primary">Choose Premium</a>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
                     </div>
-                </div>
+                </form>
             </div>
-
         </div>
-    </section>
-
-    <section class="container py-5" id="dashboard">
-        <h2 class="mb-4">Dashboard Summary</h2>
-
-        <div class="row g-3 mb-4">
-
-            <div class="col-6 col-lg-3">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <p class="text-muted mb-1">Total Patients</p>
-                        <p class="display-6 fw-bold mb-0">1,240</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <p class="text-muted mb-1">Appointments Today</p>
-                        <p class="display-6 fw-bold mb-0">38</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <p class="text-muted mb-1">Pending Requests</p>
-                        <p class="display-6 fw-bold mb-0">12</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <p class="text-muted mb-1">Active Providers</p>
-                        <p class="display-6 fw-bold mb-0">15</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <h3 class="h5 mb-3">Today's Appointments by Provider</h3>
-
-        <div class="table-responsive">
-            <table class="table table-striped align-middle">
-                <thead>
-                    <tr>
-                        <th scope="col">Provider</th>
-                        <th scope="col">Department</th>
-                        <th scope="col">Appointments</th>
-                        <th scope="col">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Dr. Sara Nasser</td>
-                        <td>Cardiology</td>
-                        <td>9</td>
-                        <td><span class="badge bg-success">Available</span></td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Omar Haddad</td>
-                        <td>Pediatrics</td>
-                        <td>12</td>
-                        <td><span class="badge bg-warning text-dark">Busy</span></td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Lina Khalil</td>
-                        <td>Dermatology</td>
-                        <td>7</td>
-                        <td><span class="badge bg-success">Available</span></td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Yousef Amr</td>
-                        <td>General Medicine</td>
-                        <td>10</td>
-                        <td><span class="badge bg-secondary">Off duty</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
