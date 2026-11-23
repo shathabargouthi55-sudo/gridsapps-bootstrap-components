@@ -14,4 +14,4 @@ Bootstrap data attributes: `data-bs-toggle` opens a component, `data-bs-target` 
 
 **4. What remains incomplete?**
 
-The form does not send data anywhere, because it needs a backend. More practice with form validation and custom branding is also needed.
+The form does not send data anywhere, because it needs a backend. 
